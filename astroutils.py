@@ -61,7 +61,6 @@ def healpixmask(nside, long_min, long_max, lat_min, lat_max, coordsystem='G'):
 			if (phi+360.0 >= long_min and theta <= lat_max and theta >= lat_min):
 				masked_map[i] = 1
 
-
 	return masked_map
 
 # Create a mask of the Galactic plane. You can do this using healpixmask, but this is a bit more condensed.

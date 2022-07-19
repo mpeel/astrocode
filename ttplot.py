@@ -1,6 +1,7 @@
 from scipy import optimize
 from scipy import odr
 import numpy as np
+import matplotlib.pyplot as plt
 
 def linfit(x, param):
 	return param[0]*x+param[1]
@@ -45,6 +46,7 @@ def plot_tt(vals1,vals2,outputname,sigma=np.empty(0),sigma_x=np.empty(0),leastsq
 		sigma_param_est = np.sqrt(np.diagonal(cov_x))
 
 	#Plot the data and the results
+	plt.figure()
 	if sigma_x.size:
 		plt.errorbar(vals1,vals2,yerr=sigma,xerr=sigma_x,fmt='.')
 	elif sigma.size:
