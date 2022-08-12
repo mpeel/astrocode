@@ -1,3 +1,4 @@
+import numpy as np
 # Debiasing, code from Federica
 # Equation 19 of https://arxiv.org/pdf/1410.4436.pdf
 def debias_p_mas(Q, U, sigmaQ, sigmaU):
