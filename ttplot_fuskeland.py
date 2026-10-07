@@ -87,7 +87,7 @@ def linear_fit_cc(d1, d2, err_d1, err_d2, freq1, freq2, strfreq1, strfreq2, dete
 		m, q, err_m, err_q = linear_fit(d1*cc1, d2*cc2, err_d1*cc1, err_d2*cc2)
 		#Compute spectral index
 		beta1 = np.log(m)/np.log(freq2/freq1)
-		aplha = beta1+2.
+		alpha = beta1+2.
 		dbeta = np.abs(beta0-beta1)
 		beta0 = beta1
 		i = i+1
@@ -130,7 +130,7 @@ def linear_fit_zerooffset_cc(d1, d2, err_d1, err_d2, freq1, freq2, strfreq1, str
 		m, q, err_m, err_q = linear_fit_zerooffset(d1*cc1, d2*cc2, err_d1*cc1, err_d2*cc2)
 		#Compute spectral index
 		beta1 = np.log(m)/np.log(freq2/freq1)
-		aplha = beta1+2.
+		alpha = beta1+2.
 		dbeta = np.abs(beta0-beta1)
 		beta0 = beta1
 		i = i+1
